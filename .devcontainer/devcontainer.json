@@ -1,0 +1,14 @@
+  {
+  "name": "Apache-Mod PHP environment",
+  "dockerComposeFile": "../.docker/compose.yaml",
+  "service": "web",
+  "workspaceFolder": "/workspaces",
+  "overrideCommand": false,
+  "customizations": {
+    "jetbrains": {
+      "backend": "PhpStorm"
+    }
+  },
+  "remoteUser": "developer",
+  "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
+}
